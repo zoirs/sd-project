@@ -1,0 +1,4 @@
+
+# Сборка (\AppData\Local\Docker\wsl\disk\)
+docker build --build-arg $(cat .env | xargs) -t stable-diffusion-controlnet .
+docker run --gpus all -p 7860:7860 stable-diffusion-controlnet
